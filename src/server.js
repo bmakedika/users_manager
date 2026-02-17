@@ -1,5 +1,7 @@
 import express from "express";
+import dotenv from "dotenv";
 
+dotenv.config();
 const app = express();
 
 app.use(express.json());
@@ -9,7 +11,7 @@ app.get("/", (req, res) => {
     message: "Users Management API",
   });
 });
-
-app.listen(3000, () => {
-  console.log("Server is running on http://localhost:3000");
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log(`Server is running on http://localhost:${port}`);
 });
