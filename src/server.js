@@ -1,33 +1,15 @@
-/*
-import http from "node:http";
+import express from "express";
 
-const listener = (request, ressponse) => {
-  ressponse.writeHead(200, { "Content-Type": "text/plain" });
-  ressponse.end("Hello World\n");
-};
+const app = express();
 
-const server = http.createServer(listener);
-server.listen(3000);
+app.use(express.json());
 
-console.log("Server running at http://localhost:3000/");
-
-*/
-
-import http from "node:http";
-import { Json } from "./utils/responses.js";
-import { listUsers } from "./users/users.controller.js";
-
-const listener = (request, response) => {
-  if (request.url === "/users") {
-    return listUsers(request, response);
-  }
-
-  return Json(response, 404, {
-    message: "Not found",
+app.get("/", (req, res) => {
+  res.json({
+    message: "Users Management API",
   });
-};
+});
 
-const server = http.createServer(listener);
-server.listen(3000);
-
-console.log("Server running at http://localhost:3000/");
+app.listen(3000, () => {
+  console.log("Server is running on http://localhost:3000");
+});
