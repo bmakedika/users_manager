@@ -13,3 +13,27 @@ export async function createUser({ userdata }) {
     data: userdata,
   });
 }
+
+// create a function to find all users
+
+export async function listUsers() {
+  return Prisma.user.findMany();
+}
+
+// create a function to find a user by id
+
+export async function getUsersById(id) {
+  return Prisma.user.findUnique({
+    where: {
+      id,
+    },
+  });
+}
+
+export async function deleteUserById(id) {
+  return Prisma.user.delete({
+    where: {
+      id,
+    },
+  });
+}
