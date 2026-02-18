@@ -5,7 +5,7 @@
 ### Step 1: Initial Setup
 
 - Clone the repo: `git clone https://github.com/bmakedika/users_manager`
-- Navigate to the project directory: `cd users-management`
+- Navigate to the project directory: `cd users-managment`
 - Install dependencies: `npm install`
 
 ### Step 2: Environment Variables
@@ -29,3 +29,7 @@
 - `npm install -D <package-name>`
 - `npm uninstall <package-name>`
 - `npm update <package-name>`
+
+## Prisma commands
+
+- `npx prisma studio`: Opens Prisma Studio to browser database
