@@ -37,3 +37,10 @@ export async function deleteUserById(id) {
     },
   });
 }
+
+export async function updateUser(id, data) {
+  return Prisma.user.update({
+    where: { id },
+    data,
+  });
+}
