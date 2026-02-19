@@ -4,6 +4,7 @@ import {
   handleListUsers,
   handleGetUserById,
   handleDeleteUserById,
+  handleUpdateUser,
 } from "./users.controller.js";
 
 const router = Router();
@@ -16,5 +17,7 @@ router.get("/", handleListUsers);
 router.get("/:id", handleGetUserById);
 
 router.delete("/:id", handleDeleteUserById);
+
+router.patch("/:id", handleUpdateUser);
 
 export default router;
