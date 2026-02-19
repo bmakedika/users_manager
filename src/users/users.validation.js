@@ -9,7 +9,7 @@ function isValidEmail(value) {
 function isValidPassword(value) {
   return typeof value === "string" && value.length >= 8;
 }
-
+// create user validation
 export function validateUser(userData) {
   const errors = {};
 
@@ -30,5 +30,33 @@ export function validateUser(userData) {
     ok: Object.keys(errors).length === 0,
     errors,
     data: userData,
+  };
+}
+
+// update user validation
+export function validateUpdateUser(userData) {
+  const errors = {};
+  const data = {};
+
+  if (userData.email !== undefined) {
+    if (!isValidEmail(userData.email)) errors.email = "Invalid email format";
+    else data.email = userData.email;
+  }
+
+  if (userData.password !== undefined) {
+    if (!isStrongPassword(userData.password))
+      errors.password = "Password must be at least 8 characters long";
+    else data.password = userData.password;
+  }
+
+  if (userData.name !== undefined) {
+    if (!isNotEmptyString(userData.name)) errors.name = "Name is required";
+    else data.name = userData.name;
+  }
+
+  return {
+    ok: Object.keys(errors).length === 0,
+    errors,
+    data,
   };
 }
