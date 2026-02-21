@@ -14,6 +14,14 @@
 - Add `PORT` variable example: `3000`.
 - Add `DATABASE_URL` variable example: `file:./dev.db`.
 
+### Check express
+
+- Run `npx list express`
+
+### If express not existe
+
+- Run `npx i express`n
+
 ### Database setup
 
 - Run `npx prisma generate`
