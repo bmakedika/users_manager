@@ -1,18 +1,53 @@
-# Users Management API
+# Users Manager API
+
+Backend project developed with **Node.js**, **Express**, **Prisma**, and **SQLite**.
+
+This API provides a complete and secure user management system, designed to demonstrate backend fundamentals and best practices.
+
+## What this project demonstrates
+
+- Clean REST API architecture
+- Input validation and business logic
+- Proper HTTP error handling
+- Email normalization and uniqueness control
+- Protection of sensitive data (password never exposed)
+- Bulk data processing
+- Clear separation of concerns (routes / controllers / services)
+
+## Main Features
+
+- User CRUD operations
+- Search user by email
+- Update user or password separately
+- Bulk user creation with full validation
+- Users count endpoint
+- Conflict management (duplicate email)
+- Structured JSON error responses
+
+## Why this project matters
+
+This project reflects real-world backend challenges:
+
+- Data consistency
+- Validation at API level
+- Security awareness
+- Maintainable project structure
+
+It represents my ability to build reliable backend services ready to evolve (authentication, testing, scaling).
 
 ## Gettings Started
 
 ### Step 1: Initial Setup
 
 - Clone the repo: `git clone https://github.com/bmakedika/users_manager`
-- Navigate to the project directory: `cd users-managment`
+- Navigate to the project directory: `cd users-managER`
 - Install dependencies: `npm install`
 
 ### Step 2: Environment Variables
 
 - Create `.env`.
-- Add `PORT` variable example: `3000`.
-- Add `DATABASE_URL` variable example: `file:./dev.db`.
+- Add variable `PORT=8080`.
+- Add also `DATABASE_URL=file:./dev.db`.
 
 ### Database setup
 
