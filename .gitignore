@@ -1,5 +1,8 @@
 /node_modules
+.idea
 
 .env
 /generated/prisma
 dev.db
+
+.DS_Store
