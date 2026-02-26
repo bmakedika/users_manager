@@ -19,7 +19,6 @@ router.post("/", handleCreateUser);
 router.get("/search", handleSearchUserByEmail);
 router.get("/count", handleCountUsers);
 router.get("/", handleListUsers);
-
 router.get("/:id", handleGetUserById);
 
 router.delete("/:id", handleDeleteUserById);
