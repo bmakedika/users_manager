@@ -171,10 +171,6 @@ export async function handleUpdateUser(req, res) {
         errors: result.errors,
       });
     }
-<<<<<<< HEAD
-    // Update user
-=======
->>>>>>> codex/fix-email-duplication-on-update
 
     if (result.data.email) {
       const existingUser = await findUserByEmail(result.data.email);
